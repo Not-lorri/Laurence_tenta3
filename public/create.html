@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <title>Create User</title>
+</head>
+<body>
+    
+    <div class="container-fluid d-flex  justify-content-center  mt-5 ">
+        <!-- Create user form -->
+        <form class="p-3 border" style="width: 50%;" method="post" action="/createUser" id="createForm"> 
+            <h2>Create User</h2>
+
+            <div class="mb-3">
+              <label for="userName" class="form-label">Username</label>
+              <input type="text" class="form-control" id="userName" aria-describedby="userName" placeholder="@Jsartorius45" name="userName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" aria-describedby="password"  name="password" required>
+            </div>
+            <div class="mb-3">
+                <h2>Role</h2>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="roleChecker" id="adminCheck" name="adminCheck" value='Admin' required checked>
+                    <label class="form-check-label" for="adminCheck">
+                      Admin
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="roleChecker" id="userCheck" name="userCheck"  value='User' required>
+                    <label class="form-check-label" for="userCheck">
+                       User
+                    </label>
+                </div>
+            </div>
+            <!-- Create Button -->
+            <button type="submit" class="btn btn-primary" id="createBTN" >Create</button>
+            <a href="/">Login</a>
+        </form>
+    </div>
+    
+</body>
+</html>
